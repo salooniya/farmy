@@ -1,0 +1,28 @@
+{
+  "name": "farmy",
+  "version": "0.0.0",
+  "description": "The Mighty JavaScript Framework",
+  "private": true,
+  "main": "src/index.js",
+  "type": "module",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "farmy": "file:"
+  },
+  "author": {
+    "name": "Nikhil Salooniya",
+    "email": "saloniyanikhil@gmail.com"
+  },
+  "keywords": [
+    "farmy",
+    "the",
+    "mighty",
+    "javascript",
+    "framework"
+  ]
+}

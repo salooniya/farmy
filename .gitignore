@@ -1,0 +1,8 @@
+# system
+.idea
+.vscode
+.DS_Store
+
+# package
+node_modules
+temp
