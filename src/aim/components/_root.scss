@@ -1,0 +1,541 @@
+/* ==== aim/components/root.scss ==== */
+
+@use "sass:map";
+@use "../modules/functions" as fn;
+@use "../modules/vaiables" as vr;
+
+/* root */
+
+* {
+  box-sizing: border-box;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: fn.toRem(map.get(vr.$sz, h, 6));
+  line-height: map.get(vr.$sz, h, 5);
+}
+
+/* h1 */
+
+h1 {
+  font-size: fn.toRem(map.get(vr.$sz, h, 1));
+}
+
+h2 {
+  font-size: fn.toRem(map.get(vr.$sz, h, 2));
+}
+
+h3 {
+  font-size: fn.toRem(map.get(vr.$sz, h, 3));
+}
+
+h4 {
+  font-size: fn.toRem(map.get(vr.$sz, h, 4));
+}
+
+h5 {
+  font-size: fn.toRem(map.get(vr.$sz, h, 5));
+}
+
+h6 {
+  font-size: fn.toRem(map.get(vr.$sz, h, 6));
+}
+
+/* a */
+
+a {
+  text-decoration: map.get(vr.$td, n);
+}
+
+/* fz : font-size */
+
+@each $keyName, $map in vr.$sz {
+  @if (true) {
+    @each $key, $value in $map {
+
+      .fz-#{$keyName}#{$key} {
+        font-size: fn.toRem($value);
+      }
+
+      .h--fz-#{$keyName}#{$key}:hover {
+        font-size: fn.toRem($value);
+      }
+
+    }
+  }
+}
+
+/* lh : line-height */
+
+@each $keyName, $map in vr.$sz {
+  @each $key, $value in $map {
+
+    .lh-#{$keyName}#{$key} {
+      line-height: $value;
+    }
+
+    .h--lh-#{$keyName}#{$key}:hover {
+      line-height: $value;
+    }
+
+  }
+}
+
+/* c: color */
+
+@each $keyName, $value in vr.$c {
+
+  .c-#{$keyName} {
+    color: $value;
+  }
+
+  .h--c-#{$keyName}:hover {
+    color: $value;
+  }
+
+}
+
+/* bgc: background-color */
+
+@each $keyName, $value in vr.$c {
+
+  .bgc-#{$keyName} {
+    background-color: $value;
+  }
+
+  .h--bgc-#{$keyName}:hover {
+    background-color: $value;
+  }
+
+}
+
+/* d : display */
+
+@each $keyName, $value in vr.$d {
+
+    .d-#{$keyName} {
+      display: $value;
+    }
+
+    .h--d-#{$keyName}:hover {
+      display: $value;
+    }
+
+}
+
+/* ac: align-content */
+
+@each $keyName, $value in vr.$ac {
+
+  .ac-#{$keyName} {
+    align-content: $value;
+  }
+
+  .h--ac-#{$keyName}:hover {
+    align-content: $value;
+  }
+
+}
+
+/* ai: align-items */
+
+@each $keyName, $value in vr.$ai {
+
+  .ai-#{$keyName} {
+    align-items: $value;
+  }
+
+  .h--ai-#{$keyName}:hover {
+    align-items: $value;
+  }
+
+}
+
+/* jc: justify-content */
+
+@each $keyName, $value in vr.$jc {
+
+  .jc-#{$keyName} {
+    justify-content: $value;
+  }
+
+  .h--jc-#{$keyName}:hover {
+    justify-content: $value;
+  }
+
+}
+
+/* cur : cursor */
+
+@each $keyName, $value in vr.$cur {
+
+  .cur-#{$keyName} {
+    cursor: $value;
+  }
+
+  .h--cur-#{$keyName}:hover {
+    cursor: $value;
+  }
+
+}
+
+/* td: text-decoration */
+
+@each $keyName, $value in vr.$td {
+
+  .td-#{$keyName} {
+    text-decoration: $value;
+  }
+
+  .h--td-#{$keyName}:hover {
+    text-decoration: $value;
+  }
+
+}
+
+/* pos: position */
+
+@each $keyName, $value in vr.$pos {
+
+  .pos-#{$keyName} {
+    position: $value;
+  }
+
+  .h--pos-#{$keyName}:hover {
+    position: $value;
+  }
+
+}
+
+/* fw: font-weight */
+
+@each $keyName, $value in vr.$pos {
+
+  .fw-#{$keyName} {
+    font-weight: $value;
+  }
+
+  .h--fw-#{$keyName}:hover {
+    font-weight: $value;
+  }
+
+}
+
+/* bds: border-style */
+
+@each $keyName, $value in vr.$bds {
+
+  .bds-#{$keyName} {
+    border-style: $value;
+  }
+
+  .h--bds-#{$keyName}:hover {
+    border-style: $value;
+  }
+
+}
+
+/* bdc: border-color */
+
+@each $keyName, $value in vr.$c {
+
+  .bdc-#{$keyName} {
+    border-color: $value;
+  }
+
+  .h--bdc-#{$keyName}:hover {
+    border-color: $value;
+  }
+
+}
+
+@each $keyName, $value in vr.$c {
+
+  .bdtc-#{$keyName} {
+    border-top-color: $value;
+  }
+
+  .bdrc-#{$keyName} {
+    border-right-color: $value;
+  }
+
+  .bdbc-#{$keyName} {
+    border-bottom-color: $value;
+  }
+
+  .bdlc-#{$keyName} {
+    border-left-color: $value;
+  }
+
+  .h--bdtc-#{$keyName}:hover {
+    border-top-color: $value;
+  }
+
+  .h--bdrc-#{$keyName}:hover {
+    border-right-color: $value;
+  }
+
+  .h--bdbc-#{$keyName}:hover {
+    border-bottom-color: $value;
+  }
+
+  .h--bdlc-#{$keyName}:hover {
+    border-left-color: $value;
+  }
+
+}
+
+/* bdrs: border-radius */
+
+@each $keyName, $map in vr.$sz {
+  @each $key, $value in $map {
+
+    .bdrs-#{$keyName}#{$key} {
+      border-radius: fn.toRem($value);
+    }
+
+    .h--bdrs-#{$keyName}#{$key}:hover {
+      border-radius: fn.toRem($value);
+    }
+
+  }
+}
+
+/* bdw: border-width */
+
+@each $keyName, $map in vr.$sz {
+  @each $key, $value in $map {
+
+    .bdw-#{$keyName}#{$key} {
+      border-width: fn.toRem($value);
+    }
+
+    .h--bdw-#{$keyName}#{$key}:hover {
+      border-width: fn.toRem($value);
+    }
+
+  }
+}
+
+/* m: margin */
+
+.m-a {
+  margin: auto;
+}
+
+.mt-a {
+  margin-top: auto;
+}
+
+.mr-a {
+  margin-right: auto;
+}
+
+.mb-a {
+  margin-bottom: auto;
+}
+
+.ml-a {
+  margin-left: auto;
+}
+
+@each $keyName, $map in vr.$sz {
+  @each $key, $value in $map {
+
+    .m-#{$keyName}#{$key} {
+      margin: fn.toRem($value);
+    }
+
+    .h--m-#{$keyName}#{$key}:hover {
+      margin: fn.toRem($value);
+    }
+
+  }
+}
+
+@each $keyName, $map in vr.$sz {
+  @each $key, $value in $map {
+
+    .mt-#{$keyName}#{$key} {
+      margin-top: fn.toRem($value);
+    }
+
+    .mr-#{$keyName}#{$key} {
+      margin-right: fn.toRem($value);
+    }
+
+    .mb-#{$keyName}#{$key} {
+      margin-bottom: fn.toRem($value);
+    }
+
+    .ml-#{$keyName}#{$key} {
+      margin-left: fn.toRem($value);
+    }
+
+    .h--mt-#{$keyName}#{$key}:hover {
+      margin-top: fn.toRem($value);
+    }
+
+    .h--mr-#{$keyName}#{$key}:hover {
+      margin-right: fn.toRem($value);
+    }
+
+    .h--mb-#{$keyName}#{$key}:hover {
+      margin-bottom: fn.toRem($value);
+    }
+
+    .h--ml-#{$keyName}#{$key}:hover {
+      margin-left: fn.toRem($value);
+    }
+
+  }
+}
+
+/* p: padding */
+
+@each $keyName, $map in vr.$sz {
+  @each $key, $value in $map {
+
+    .p-#{$keyName}#{$key} {
+      padding: fn.toRem($value);
+    }
+
+    .h--p-#{$keyName}#{$key}:hover {
+      padding: fn.toRem($value);
+    }
+
+  }
+}
+
+@each $keyName, $map in vr.$sz {
+  @each $key, $value in $map {
+
+    .pt-#{$keyName}#{$key} {
+      padding-top: fn.toRem($value);
+    }
+
+    .pr-#{$keyName}#{$key} {
+      padding-right: fn.toRem($value);
+    }
+
+    .pb-#{$keyName}#{$key} {
+      padding-bottom: fn.toRem($value);
+    }
+
+    .pl-#{$keyName}#{$key} {
+      padding-left: fn.toRem($value);
+    }
+
+    .h--pt-#{$keyName}#{$key}:hover {
+      padding-top: fn.toRem($value);
+    }
+
+    .h--pr-#{$keyName}#{$key}:hover {
+      padding-right: fn.toRem($value);
+    }
+
+    .h--pb-#{$keyName}#{$key}:hover {
+      padding-bottom: fn.toRem($value);
+    }
+
+    .h--pl-#{$keyName}#{$key}:hover {
+      padding-left: fn.toRem($value);
+    }
+
+  }
+}
+
+/* ov: overflow */
+
+@each $keyName, $value in vr.$ov {
+
+  .ov-#{$keyName} {
+    overflow: $value;
+  }
+
+  .h--ov-#{$keyName}:hover {
+    overflow: $value;
+  }
+
+}
+
+/* w: width */
+
+.w-a {
+  width: auto;
+}
+
+.w-P100 {
+  width: 100%;
+}
+
+/* h: height */
+
+.h-a {
+  height: auto;
+}
+
+.h-P100 {
+  height: 100%;
+}
+
+/* bxsh: box-shadow */
+
+.bxsh-1 {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+};
+
+.bxsh-2 {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+};
+
+/* maw: max-width */
+
+.maw-mobile-s {
+  max-width: 320px;
+}
+
+.maw-mobile-m {
+  max-width: 375px;
+}
+
+.maw-mobile-l {
+  max-width: 425px;
+}
+
+.maw-tablet {
+  max-width: 768px;
+}
+
+.maw-laptop {
+  max-width: 1024px;
+}
+
+.maw-laptop-l {
+  max-width: 1440px;
+}
+
+/* trs: transition */
+
+@each $keyName, $map in vr.$sz {
+  @each $key, $value in $map {
+    $t: $value * 1s;
+
+    .trs-c-#{$keyName}#{$key} {
+      transition: color $t;
+    }
+
+    .trs-bgc-#{$keyName}#{$key} {
+      transition: background-color $t;
+    }
+
+  }
+}

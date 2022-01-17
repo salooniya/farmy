@@ -9,10 +9,21 @@
     "src"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:serve": "webpack serve --open --config test/webpack.test.cjs",
+    "test:serve-firefox": "webpack serve --open-app-name firefox --config test/webpack.test.cjs",
+    "test:watch": "webpack --watch --config test/webpack.test.cjs",
+    "test:build": "webpack --config test/webpack.test.cjs"
   },
   "dependencies": {
-    "farmy": "file:"
+    "farmy": "file:",
+    "css-loader": "^6.5.1",
+    "sass": "^1.48.0",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.3"
   },
   "author": {
     "name": "Nikhil Salooniya",

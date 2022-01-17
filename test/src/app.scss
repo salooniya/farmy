@@ -1,0 +1,24 @@
+header {
+  class: 'ov-h bxsh-1 pos-f w-P100 bgc-teal3 p-s1 fw-br';
+
+  inner {
+    class: 'maw-laptop-l m-a ov-h bxsh-2 d-f ai-s jc-sb bgc-white c-dark bdrs-s6';
+
+    nav {
+      class: 'd-f ai-s ac-c jc-c fz-h5';
+    }
+
+    a {
+      class: 'd-f ai-c jc-c p-s4 pl-h4 pr-h4 trs-c-m3 trs-bgc-m3';
+
+      h1 {
+        class: 'fz-h2';
+      }
+
+      &:hover {
+        class: 'h--bgc-teal5 h--c-white';
+      }
+    }
+
+  }
+}

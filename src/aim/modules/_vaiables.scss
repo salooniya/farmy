@@ -1,0 +1,218 @@
+/* ==== aim/modules/variables.scss ==== */
+
+@use "sass:map";
+@use "functions" as fn;
+
+/* sz: sizes */
+
+$sz: (
+  x: (
+    1: 15.6,
+    2: 14.0,
+    3: 12.4,
+    4: 10.8
+  ),
+  l: (
+    1: 9.2,
+    2: 8.4,
+    3: 7.6,
+    4: 6.8,
+    5: 6.0,
+    6: 5.2
+  ),
+  d: (
+    1: 4.4,
+    2: 4.0,
+    3: 3.6,
+    4: 3.2,
+    5: 2.8,
+    6: 2.4
+  ),
+  h: (
+    1: 2.0,
+    2: 1.8,
+    3: 1.6,
+    4: 1.4,
+    5: 1.2,
+    6: 1.0
+  ),
+  s: (
+    1: 0.9,
+    2: 0.8,
+    3: 0.7,
+    4: 0.6,
+    5: 0.5,
+    6: 0.4
+  ),
+  m: (
+    1: 0.3,
+    2: 0.2,
+    3: 0.1,
+    4: 0.0,
+  )
+);
+
+/* c: colors */
+
+$c: (
+  'transparent': transparent,
+  'white': #FFFFFF,
+  'black': #000000,
+  'dark': #333030,
+  'dark0': #121212,
+  'dark2': #191919,
+  'light': #F5F5F5,
+  'light2': #EEEEEE,
+  'red': #F05454,
+  'red2': #FFAFAF,
+  'magenta': #DB6B97,
+  'magenta2': #7D0633,
+  'green': #A6CF98,
+  'teal': #4FBDBA,
+  'teal2': #79B4B7,
+  'purple': #B762C1,
+  'purple2': #B8B5FF,
+  'skin': #FFF5E1,
+  'brown': #362222,
+  'yellow': #F9D371,
+  'yellow2': #FDFCE5,
+  'yellow3': #FFAD60,
+  'teal3': #B1D0E0,
+  'teal4': #FDFCE5,
+  'teal5': #22577E,
+  'blue': #548CFF,
+  'blue2': #293A80,
+  'blue3': #b0c2f5,
+  'pink': #FFC4E1,
+  'orange': #DE834D
+);
+
+/* d: display */
+
+$d: (
+  n: none,
+  b: block,
+  f: flex,
+  if: inline-flex,
+  i: inline,
+  ib: inline-block,
+  li: list-item,
+  ri: run-in,
+  cp: compact,
+  tb: table,
+  itb: inline-table,
+  tbcp: table-caption,
+  tbcl: table-column,
+  tbclg: table-column-group,
+  tbhg: table-header-group,
+  tbfg: table-footer-group,
+  tbr: table-row,
+  tbrg: table-row-group,
+  tbc: table-cell,
+  rb: ruby,
+  rbb: ruby-base,
+  rbbg: ruby-base-group,
+  rbt: ruby-text,
+  rbtg: ruby-text-group,
+  g: grid,
+  ig: inline-grid
+);
+
+/* ac: align-content */
+
+$ac: (
+  c: center,
+  fe: flex-end,
+  fs: flex-start,
+  s: stretch,
+  sa: space-around,
+  sb: space-between
+);
+
+/* ai: align-items */
+
+$ai: (
+  b: baseline,
+  c: center,
+  fe: flex-end,
+  fs: flex-start,
+  s: stretch
+);
+
+/* jc: justify-content */
+
+$jc: (
+  c: center,
+  fe: flex-end,
+  fs: flex-start,
+  sa: space-around,
+  sb: space-between
+);
+
+/* cur: cursor */
+
+$cur: (
+  a: auto,
+  d: default,
+  c: crosshair,
+  ha: hand,
+  he: help,
+  m: move,
+  p: pointer,
+  t: tex
+);
+
+/* td: text-decoration */
+
+$td: (
+  n: none,
+  u: underline,
+  o: overline,
+  l: line-through
+);
+
+/* pos: position */
+
+$pos: (
+  s: static,
+  a: absolute,
+  r: relative,
+  f: fixed,
+  sticky: sticky
+);
+
+/* fw: font-weight */
+
+$fw: (
+  n: normal,
+  b: bold,
+  br: bolder,
+  lr: lighter
+);
+
+/* bds: border-style */
+
+$bds: (
+  "n": none,
+  "h": hidden,
+  "dt": dotted,
+  "ds" :dashed,
+  "s" :solid,
+  "db" :double,
+  "dtds" :dot-dash,
+  "dtdtds" :dot-dot-dash,
+  "w" :wave,
+  "g" :groove,
+  "r" :ridge,
+  "i" :inset,
+  "o" :outset
+);
+
+/* ov: overflow */
+
+$ov: (
+  v: visible,
+  h: hidden,
+  s: scroll,
+  a: auto
+);
