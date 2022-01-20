@@ -275,6 +275,7 @@ Router.prototype.to = async function (url, {reload = false, title = null, data =
 };
 
 Router.start = function (router) {
+    router.run();
     window.addEventListener('popstate', router.run.bind(router, undefined));
     document.body.addEventListener('click', (e) => {
         const el = e.target.closest('a');
