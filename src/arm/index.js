@@ -279,7 +279,7 @@ Router.start = function (router) {
     window.addEventListener('popstate', router.run.bind(router, undefined));
     document.body.addEventListener('click', (e) => {
         const el = e.target.closest('a');
-        if (el?.hasAttributes(router.opts.matchLink) === true) {
+        if (el?.hasAttribute(router.opts.matchLink) === true) {
             e.preventDefault();
             const href = el.getAttribute('href');
 
